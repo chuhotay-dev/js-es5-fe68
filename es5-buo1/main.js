@@ -56,6 +56,7 @@ const PI = 3.14;
  * Câu lệnh điều kiện:
  * - if 
  * - if else 
+ * - ternary operator (toán tử 3 ngôi)
  * - else if
  * - switch case: chỉ so sánh bằng
  * Phép so sánh:
@@ -96,6 +97,11 @@ if (isAdult) {
 } else {
     console.log('FBI warning!!!');
 }
+
+// Ternary operator (toán tử 3 ngôi)
+1 === 2 ? console.log("Điều kiện đúng") : console.log('Điều kiện sai');
+var res = isGirl ? 'Hello Girl' : 'Hello Boy';
+console.log(res);
 
 // Else if
 var trafficLight = 'green';
@@ -150,13 +156,18 @@ console.log(!(!A || B)); // true
  * - Hàm có tham số, không có giá trị trả về
  * - Hàm vừa có tham số vừa có giá trị trả về
  * - Tên function phải có ý nghĩa, nên bắt đầu bằng động từ
+ * - Hoisting: Là cơ chế đẩy một biến được khai lên trên cùng scope chứa nó => có thể truy cập được biến trước khi khai báo
+ *      + Đối với biến: hoisting chỉ xảy ra với từ khoá var
+ *      + Đối với func: hoisting chỉ xảy ra với declaration func
  */
 
-// delaration
+
+// delaration func
 // Hàm không tham số, không có giá trị trả về
 function sayHello() {
     console.log('Hello there!');
 }
+
 
 // Hàm có tham số, không có giá trị trả về
 function sayHelloToSomeone(name) {
@@ -170,11 +181,61 @@ function calculateGPA(score1, score2, score3) {
 }
 
 // Gọi function
-sayHello();
+// sayHello();
 sayHelloToSomeone('Tay');
 var _gpa = calculateGPA(7, 5, 8);
 console.log(_gpa);
 
+// _sayHello('Y'); => toang
+
+// expresstion func
+var _sayHello = function(name) {
+    console.log('Hello ' + name)
+}
+
+
+_sayHello('Tay');
+
+
+// Hoisting
+// var demoHoisting;
+console.log(demoHoisting);
+var demoHoisting = 'hoisting';
+
+// console.log(hoistingConst); // => toang
+const hoistingConst = 'hoisting';
+
+
+/**
+ * BT1: Tính điểm TB và xếp loại SV
+ */
+var tinhDiemTB = function(dToan, dLy, dHoa) {
+    return (dToan + dLy + dHoa) / 3;
+}
+
+var xepLoai = function() {
+    var dtb = tinhDiemTB(1, 1, 1);
+    var xepLoai = '';
+
+    if (dtb >= 9 && dtb <= 10) {
+        xepLoai = 'Xuất sắc';
+    } else if (dtb >= 8 && dtb < 9) {
+        xepLoai = 'Giỏi';
+    } else if (dtb >= 7 && dtb < 8) {
+        xepLoai = 'Khá';
+    } else if (dtb >=6 && dtb < 7) {
+        xepLoai = 'TB khá';
+    } else if (dtb >= 5 && dtb < 6) {
+        xepLoai = 'Trung bình';
+    } else {
+        xepLoai = 'Yếu';
+    }
+
+    console.log('Xếp loại: ' + xepLoai);
+
+}
+
+xepLoai();
 
 
 
