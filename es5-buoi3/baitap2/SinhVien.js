@@ -18,8 +18,8 @@ function SinhVien(_ma, _ten, _email, _matKhau, _ngaySinh, _khoaHoc, _dToan, _dLy
 }
 
 // Khởi tạo 1 đối tượng sinh viên từ lớp đối tượng SinhVien
-var sv1 = new SinhVien('SV1', 'Tay', 'taych@gmail.com', '12345', '08/06', 'FE68', 4, 5, 6);
-console.log(sv1);
+// var sv1 = new SinhVien('SV1', 'Tay', 'taych@gmail.com', '12345', '08/06', 'FE68', 4, 5, 6);
+// console.log(sv1);
 
 
 /**
