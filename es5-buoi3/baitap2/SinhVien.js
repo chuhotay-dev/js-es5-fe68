@@ -27,7 +27,7 @@ function SinhVien(_ma, _ten, _email, _matKhau, _ngaySinh, _khoaHoc, _dToan, _dLy
  * 4 bước: 
  * - b1: Tạo ra 1 object rỗng (empty object => {})
  * - b2: Gọi function SinhVien và đồng thời gán object rỗng được tạo ở bước 1 vào biến this (this = {})
- * - b3: Trở object rỗng (b1) đến object prototype trong constructor func (SinhVien)
+ * - b3: Trỏ object rỗng (b1) đến object prototype trong constructor func (SinhVien)
  * - b4: Return về obj rỗng được tạo ra ở bước 1
  */
 
