@@ -3,7 +3,7 @@ Thư viện axios (tương tác với API)
     + Đồng bộ (Synchronous) vs. Bất đồng bộ (Asynchronous)
     + Promise
 
-    + AJAX => Asynchronous JavaScript and XML
+    + AJAX => Asynchronous JavaScript and XML (JSON)
     + API
     + HTTP methods
     + JSON
